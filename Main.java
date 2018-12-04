@@ -28,7 +28,7 @@ public class Main {
 
         Person suma = (str1, str2) -> (Integer.parseInt(str1) + Integer.parseInt(str2));
 
-        String file = "C://Users//194930//IdeaProjects//ZPO.Lab05_1//dane.txt";
+        String file = "Sciezka do dane.txt";
         try (Stream<String> stream = Files.lines(Paths.get(file), StandardCharsets.ISO_8859_1)) {
             stream.peek(e -> {
                 String[] test = e.split(" ");
