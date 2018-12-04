@@ -17,8 +17,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<String> people = new ArrayList();
-
         ArrayList<String[]> peopleSplit = new ArrayList();
 
         LinkedHashMap<String, Integer> nationalities = new LinkedHashMap<>(4);
@@ -32,8 +30,6 @@ public class Main {
 
         String file = "C://Users//194930//IdeaProjects//ZPO.Lab05_1//dane.txt";
         try (Stream<String> stream = Files.lines(Paths.get(file), StandardCharsets.ISO_8859_1)) {
-            //stream.peek(e -> System.out.println("Value: " + e)).forEach(people::add);
-            //stream.peek(e -> System.out.println(e.split(" "))).forEach(people::add);
             stream.peek(e -> {
                 String[] test = e.split(" ");
                 peopleSplit.add(test);
